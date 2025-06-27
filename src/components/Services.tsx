@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Palette, Code, Monitor, Smartphone, Globe, Gauge } from "lucide-react";
-import "./Services.css";
+import "./services.css";
 
 // Motion Variants
 const fadeIn = {

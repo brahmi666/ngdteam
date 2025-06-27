@@ -1,0 +1,123 @@
+/* Team Section */
+.team-section {
+  background: #111;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.team-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.team-header h2 {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.team-header p {
+  color: #bbb;
+  margin-bottom: 40px;
+}
+
+/* Carousel Wrapper & Nav */
+.carousel-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #5353536f;
+  border: 1px solid #444;
+  color: #1111117b;
+  padding: 0.5rem 1rem;
+  font-size: 1.4rem;
+  border-radius: 5%;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: background 0.2s;
+}
+
+.nav-btn:hover {
+  background-color: #a29e9e73;
+}
+
+.nav-btn.left {
+  left: 10px;
+}
+
+.nav-btn.right {
+  right: 10px;
+}
+
+/* Horizontal, Snap‑Scroll Carousel */
+.team-cards {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 20px 0;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  cursor: grab;
+}
+
+.team-cards::-webkit-scrollbar {
+  display: none;
+}
+
+/* Individual Card */
+.team-card {
+  background: #222;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  flex: 0 0 auto;
+  width: 280px;
+  scroll-snap-align: center;
+  transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-10px);
+}
+
+.team-card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.team-info h3 {
+  color: #fff;
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+
+.team-info p {
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+/* Mobile View: Center each card */
+@media (max-width: 768px) {
+  .team-card {
+    width: 90%;
+    max-width: none;
+    margin: 0 auto;
+  }
+
+  .nav-btn {
+    font-size: 1.2rem;
+    padding: 0.4rem 0.8rem;
+  }
+}

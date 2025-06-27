@@ -1,0 +1,62 @@
+.service-card {
+  position: relative;
+  display: inline-flex;
+  height: 240px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 1rem;
+  padding: 1px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-bg {
+  position: absolute;
+  inset: -1000%;
+  background: conic-gradient(
+    from 90deg at 50% 50%,
+    #565656 0%,
+    #000000 50%,
+    #ffd000 100%
+  );
+  animation: spin 8s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.service-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  border-radius: 1rem;
+  background: black;
+  padding: 2rem;
+  text-align: center;
+  color: #a0a0a0;
+  backdrop-filter: blur(10px);
+  transition: color 0.3s ease-in-out;
+}
+
+.service-card:hover .service-content {
+  color: white;
+}
+
+.service-icon {
+  padding: 1.25rem;
+  border-radius: 0.75rem;
+  background: #0e0e0e;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}

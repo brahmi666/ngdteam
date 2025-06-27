@@ -33,7 +33,7 @@ export const WavyBackground = ({
 
   const getSpeed = useCallback(() => (speed === "fast" ? 0.002 : 0.001), [speed]);
 
-  const waveColors = colors ?? ["#FFD700", "#EDEDED", "#aa2000", "#FFA41B", "#FF5151"];
+  const waveColors = colors ?? ["#FFD700", "#EDEDED", "#FFD700", "#FFA41B", "#EDEDED"];
 
   const resizeCanvas = useCallback(() => {
     const canvas = canvasRef.current;
